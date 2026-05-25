@@ -1,0 +1,10 @@
+name: StockyAI
+version: 1.0.0
+schema: v1
+
+models:
+  - name: DeepSeek Chat
+    provider: openai
+    model: deepseek/deepseek-chat-v3-0324
+    apiBase: https://openrouter.ai/api/v1
+    apiKey: ${OPENROUTER_API_KEY}
