@@ -1,0 +1,45 @@
+{
+  "result_id": "FED-RESULT-001",
+  "name": "Federation Stage 1 — 2 Nodes, Same Schema, Shared Consensus",
+  "timestamp": "2026-05-31",
+  "seed": 42,
+  "epoch_cycles": 7150,
+  "telemetry_captures": 852,
+  "panics": 0,
+  "stall_free_streak": 852,
+  "replay_passed": true,
+  "consensus_history": {
+    "rounds": 7100,
+    "avg_strength": 0.7647,
+    "min_strength": 0.6000,
+    "max_strength": 0.8115,
+    "conflict_events": 149,
+    "conflict_pct": 2.1
+  },
+  "vs_baseline": {
+    "governance_oscillation": { "baseline": 0.027, "federation": 0.072, "delta": 0.045, "interpretation": "natural_increase_from_cross_node_interaction" },
+    "confidence_drift": { "baseline": 0.0017, "federation": 0.000048, "delta": -0.00165, "interpretation": "convergent_trajectories_across_nodes" },
+    "entropy_velocity": { "baseline": 0.00011, "federation": 0.000013, "delta": -0.000097, "interpretation": "architectural_limitation_confirmed" },
+    "replay_divergence": { "baseline": -4.0, "federation": 0.0, "delta": 4.0, "interpretation": "deterministic_no_challenge" },
+    "panics": { "baseline": 0, "federation": 0, "delta": 0, "interpretation": "no_destabilization" }
+  },
+  "phase_velocities": {
+    "WARMUP": { "cycle": 500, "entropy_velocity": 0.000110, "governance_oscillation_velocity": 0.073684, "confidence_drift_velocity": 0.001722 },
+    "STABILIZATION": { "cycle": 1500, "entropy_velocity": -0.000024, "governance_oscillation_velocity": 0.071579, "confidence_drift_velocity": -0.000036 },
+    "CHAOS": { "cycle": 3500, "entropy_velocity": -0.000002, "governance_oscillation_velocity": 0.056842, "confidence_drift_velocity": -0.000010 },
+    "RECOVERY": { "cycle": 4000, "entropy_velocity": -0.000002, "governance_oscillation_velocity": 0.063158, "confidence_drift_velocity": 0.000172 },
+    "OBSERVATION": { "cycle": 7000, "entropy_velocity": -0.000002, "governance_oscillation_velocity": 0.071579, "confidence_drift_velocity": 0.000045 },
+    "SHUTDOWN": { "cycle": 7100, "entropy_velocity": 0.000013, "governance_oscillation_velocity": 0.071579, "confidence_drift_velocity": 0.000048 },
+    "RECOVERY_BOOT": { "cycle": 7150, "entropy_velocity": 0.000013, "governance_oscillation_velocity": 0.071579, "confidence_drift_velocity": 0.000048 },
+    "REPLAY_VALIDATION": { "cycle": 7150, "entropy_velocity": 0.000013, "governance_oscillation_velocity": 0.071579, "confidence_drift_velocity": 0.000048 }
+  },
+  "infrastructure_validated": [
+    "federated_runtime_2_nodes",
+    "consensus_engine_stable_across_7100_rounds",
+    "cross_node_governance_oscillation_detected",
+    "deterministic_replay_preserved",
+    "telemetry_stable_at_federation_scale",
+    "panic_system_no_false_positives"
+  ],
+  "next": "Federation Stage 1.5 — Asymmetric Observation (node executor + node observer)"
+}

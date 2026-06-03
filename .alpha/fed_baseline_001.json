@@ -1,0 +1,88 @@
+{
+  "baseline_id": "FED-BASELINE-001",
+  "name": "Alpha-2.5 Physiological Baseline for Federation Stage 1",
+  "timestamp": "2026-05-31",
+  "epoch": "Alpha-2.5",
+  "seed": 42,
+  "cycles": 8750,
+  "captures": 349,
+  "phases": 8,
+  "metrics": {
+    "governance_oscillation": 0.027,
+    "confidence_drift": 0.0017,
+    "replay_divergence": -4.0,
+    "entropy_velocity": 0.00011,
+    "panics": 0,
+    "stall_free_streak": 349
+  },
+  "phase_velocities": {
+    "WARMUP": {
+      "entropy_velocity": 0.000110,
+      "governance_oscillation_velocity": 0.023158,
+      "confidence_drift_velocity": 0.001722,
+      "replay_divergence_velocity": 0.0
+    },
+    "STABILIZATION": {
+      "entropy_velocity": -0.000024,
+      "governance_oscillation_velocity": 0.025263,
+      "confidence_drift_velocity": -0.000036,
+      "replay_divergence_velocity": 0.0
+    },
+    "CHAOS": {
+      "entropy_velocity": -0.000002,
+      "governance_oscillation_velocity": 0.018947,
+      "confidence_drift_velocity": -0.000010,
+      "replay_divergence_velocity": 0.0
+    },
+    "RECOVERY": {
+      "entropy_velocity": -0.000002,
+      "governance_oscillation_velocity": 0.027368,
+      "confidence_drift_velocity": 0.000172,
+      "replay_divergence_velocity": 0.0
+    },
+    "OBSERVATION": {
+      "entropy_velocity": -0.000002,
+      "governance_oscillation_velocity": 0.025263,
+      "confidence_drift_velocity": -0.000026,
+      "replay_divergence_velocity": 0.0
+    },
+    "REPLAY_VALIDATION": {
+      "entropy_velocity": 0.0,
+      "governance_oscillation_velocity": 0.0,
+      "confidence_drift_velocity": 0.0,
+      "replay_divergence_velocity": -4.0
+    }
+  },
+  "success_criteria": {
+    "entropy_velocity_target": 0.001,
+    "entropy_velocity_actual": 0.00011,
+    "entropy_velocity_status": "architectural_saturation_effect_accepted",
+    "governance_oscillation_target": "0.01-0.15",
+    "governance_oscillation_actual": 0.027,
+    "governance_oscillation_status": "pass",
+    "confidence_drift_target": 0.001,
+    "confidence_drift_actual": 0.0017,
+    "confidence_drift_status": "pass",
+    "replay_divergence_target": "non_zero",
+    "replay_divergence_actual": -4.0,
+    "replay_divergence_status": "pass",
+    "panics_target": 0,
+    "panics_actual": 0,
+    "panics_status": "pass"
+  },
+  "infrastructure_verified": [
+    "memory_bounds",
+    "trace_window",
+    "faa_cycle_indexed",
+    "liveness_observatory",
+    "delta_checkpoints",
+    "telemetry_observatory",
+    "replay_challenge_infrastructure",
+    "panic_layer_stable",
+    "reality_injection",
+    "causal_graph_active",
+    "intelligence_store_active"
+  ],
+  "purpose": "Pre-Federation physiological baseline. All Stage 1 metrics will be compared as ΔFederation - ΔBaseline, not absolute values.",
+  "next": "Federation Stage 1: 2 Nodes, Same Schema, Shared Consensus"
+}

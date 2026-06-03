@@ -1,11 +1,8 @@
 # Stocky Engineering OS
 
-## Vision
+Stocky Engineering OS is a **self-observing cognitive runtime system** — a deterministic execution engine that processes events through a governed pipeline, records decisions as traces, and exposes only sanitized DTOs externally. It is not an IDE, a framework, or an agent platform. It is a runtime architecture.
 
-Stocky Engineering OS is a **Self-Observing Cognitive Runtime System**.
-It is not an IDE. It is not a framework. It is a runtime architecture.
-
-## Architecture Model
+## Architecture
 
 ```
 Console (CLI)
@@ -21,18 +18,11 @@ RuntimeLoop (Pipeline)
   P3 → Preflight → P4 → Sandbox → CapabilityRegistry → Trace → DTO
 ```
 
-Events flow through a deterministic pipeline: submit → P3 (proposal) → Preflight (validity) → P4 (authority) → Sandbox (execution) → Capabilities (work) → Trace (recording) → DTO (sanitized output).
-
-## Core Guarantees
-
-- **Deterministic execution** — same input always produces same pipeline behavior, DTO structure, and decision outcome
-- **P4 single authority** — risk-based ALLOW/BLOCK decisions are the sole governance mechanism
-- **Sandbox isolation** — execution cells are isolated from runtime state
-- **DTO-only external boundary** — no internal fields (P4 reasoning, telemetry, governance) ever leak to public output
-- **Internal tooling isolation** — `.internal/` contains engineering notes and CI tooling, never imported by runtime code
-- **Capability providers are stateless** — they return dicts, never influence P4, governance, lifecycle, or runtime state
+Every event traverses the full pipeline: submit → P3 (proposal) → Preflight (validity) → P4 (authority) → Sandbox (execution) → Capabilities (work) → Trace (recording) → DTO (sanitized output). The pipeline is deterministic — same input always produces the same behavior, structure, and decision.
 
 ## Quick Start
+
+Requires Python 3.12+. No external dependencies.
 
 ```sh
 python -m cognitive_runtime.console.main status
@@ -41,15 +31,20 @@ python -m cognitive_runtime.console.main show_result <receipt_id>
 python -m cognitive_runtime.console.main show_trace <event_id>
 ```
 
-Requires Python 3.12+. No external dependencies.
-
-## Status
-
-**v0.1.0-rc1** — Release Candidate. Architecture locked, boundaries enforced, 1872 tests passing.
+Run tests:
 
 ```sh
 python -m pytest
 ```
+
+## What It Is Not
+
+- Not an IDE — no editor, no debugger, no language server
+- Not a framework — no web server, no routing, no ORM
+- Not an agent platform — no agent lifecycle management, no multi-agent orchestration
+- Not a database — no persistent query engine, no schema migrations
+
+Stocky Engineering OS is a **runtime kernel** that brings deterministic governance and observation to event-driven engineering workflows.
 
 ## License
 

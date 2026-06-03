@@ -1,0 +1,58 @@
+{
+  "stage": "FED-1.5",
+  "status": "PASS",
+  "cycles": 1610,
+  "panics": 0,
+  "observer_drift": {
+    "governance_avg": 0.033898,
+    "governance_max": 0.1015,
+    "stability_avg": 0.007507,
+    "confidence_avg": 0.092978
+  },
+  "consensus": {
+    "avg_strength": 0.76677
+  },
+  "phase_velocities": {
+    "WARMUP": {
+      "entropy_velocity": -0.00011599999999999995,
+      "confidence_velocity": null,
+      "stability_velocity": null
+    },
+    "STABILIZATION": {
+      "entropy_velocity": -3.8666666666666647e-05,
+      "confidence_velocity": null,
+      "stability_velocity": null
+    },
+    "CHAOS": {
+      "entropy_velocity": -4.315789473684202e-06,
+      "confidence_velocity": null,
+      "stability_velocity": null
+    },
+    "RECOVERY": {
+      "entropy_velocity": 8.421052631578948e-06,
+      "confidence_velocity": null,
+      "stability_velocity": null
+    },
+    "OBSERVATION": {
+      "entropy_velocity": -1.5684210526315786e-05,
+      "confidence_velocity": null,
+      "stability_velocity": null
+    },
+    "SHUTDOWN": {
+      "entropy_velocity": -1.5684210526315786e-05,
+      "confidence_velocity": null,
+      "stability_velocity": null
+    },
+    "RECOVERY_BOOT": {
+      "entropy_velocity": -1.5684210526315786e-05,
+      "confidence_velocity": null,
+      "stability_velocity": null
+    },
+    "REPLAY_VALIDATION": {
+      "entropy_velocity": -1.5684210526315786e-05,
+      "confidence_velocity": null,
+      "stability_velocity": null
+    }
+  },
+  "message": "EPOCH_PASSED: 1620 cycles, 96 captures, 0 non-critical panics, replay=True"
+}

@@ -1,0 +1,12 @@
+__pycache__/
+*.pyc
+*.pyo
+.pytest_cache/
+.vscode/
+.idea/
+*.db
+*.db-journal
+*.db-wal
+*.db-shm
+p4_ledger.log
+.internal/
