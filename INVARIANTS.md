@@ -61,3 +61,4 @@
 | LEGACY-BOUNDARY-001 | Any module not part of the active runtime graph must reside under /legacy and must not be imported by runtime, gateway, contracts, console, or capabilities | Active |
 | CAPABILITY-ISOLATION-001 | Capability providers are execution workers only — they do work and return dicts; they must NOT influence P4, governance, daemon lifecycle, or runtime state | Active |
 | INTERNAL-BOUNDARY-001 | Internal engineering tooling must reside under `.internal/` and must not participate in the active runtime graph | Active |
+| ADAPTER-ISOLATION-001 | Adapters may observe hosts and translate events but may never access RuntimeLoop, P4, GovernanceEngine, SandboxPool, TelemetryStore, IntelligenceStore, RecoveryCoordinator, or any runtime internal — gateway contracts only | Active |
